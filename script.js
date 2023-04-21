@@ -72,11 +72,49 @@ object.inc(); // придумать свое название для метод�
 object.height; // 11;
 */
 
-const object = {
-  height: 10,
-  inc() {
-    console.log(++this.height);
+// const object = {
+//   height: 10,
+//   inc() {
+//     console.log(++this.height);
+//     return this;
+//   },
+// };
+// console.log(object.inc().inc());
+
+// fourth
+
+/*
+Создать объект “вычислитель”, у которого есть числовое свойство
+
+“значение” и методы “удвоить”, “прибавить один”, “отнять один”.
+
+Методы можно вызывать через точку, образуя цепочку методов:
+const numerator = {
+value: 1,
+double: function () {...},
+plusOne: function () {...},
+minusOne: function () {...},
+}
+numerator.double().plusOne().plusOne().minusOne();
+
+numerator.value // 3
+*/
+
+const numerator = {
+  value: 1,
+  double: function () {
+    this.value *= 2;
+    return this;
+  },
+  plusOne: function () {
+    ++this.value;
+    return this;
+  },
+  minusOne: function () {
+    --this.value;
     return this;
   },
 };
-console.log(object.inc().inc());
+numerator.double().plusOne().plusOne().minusOne();
+
+console.log(numerator.value);
