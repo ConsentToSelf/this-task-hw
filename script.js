@@ -126,16 +126,25 @@ numerator.value // 3
 Этот объект должен содержать метод для получения общей стоимости всех товаров (цена * количество продуктов)
 */
 
-// function getAllPrice(price) {
-//   let allProducts =
-//     parseInt(this.apple) + parseInt(this.banan) + parseInt(this.cucumber);
-//   price *= allProducts;
-//   return price;
-// }
-// const products = {
-//   apple: "2$",
-//   banan: "5$",
-//   cucumber: "4$",
-//   getAllPrice,
-// };
-// console.log(products.getAllPrice(4));
+function getAllPrice() {
+  return this.price * this.allProducts;
+}
+const products = {
+  price: 100,
+  allProducts: 50,
+  getAllPrice,
+};
+// six
+/*
+Создать объект из предыдущей задачи. Создать второй объект, 
+который описывает количество деталей и цену за одну деталь.
+Для второго объекта нужно узнать общую стоимость всех деталей,
+но нельзя создавать новые функции и методы.
+
+Для этого “позаимствуйте” метод из предыдущего объекта.
+*/
+const details = {
+  price: 10,
+  allProducts: 5,
+};
+console.log(products.getAllPrice.call(details));
