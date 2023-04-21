@@ -8,17 +8,14 @@
 const rectangle = {width:..., height:..., getSquare:...};
 */
 
-// function getSquare() {
-//   console.log(this.width);
-//   console.log(this.height);
-//   console.log(this.width * this.height);
-//   return this;
-// }
-// const rectangle = {
-//   width: 10,
-//   height: 10,
-//   getSquare,
-// };
+function getSquare() {
+  return this.width * this.height;
+}
+const rectangle = {
+  width: 10,
+  height: 10,
+  getSquare,
+};
 // const getSquareVar = rectangle.getSquare();
 
 // second
@@ -143,8 +140,22 @@ const products = {
 
 Для этого “позаимствуйте” метод из предыдущего объекта.
 */
-const details = {
-  price: 10,
-  allProducts: 5,
-};
-console.log(products.getAllPrice.call(details));
+// const details = {
+//   price: 10,
+//   allProducts: 5,
+// };
+// console.log(products.getAllPrice.call(details));
+
+// eight
+/*
+Даны объект и функция:
+
+let sizes = {width: 5, height: 10},
+
+getSquare = function () {return this.width * this.height};
+
+Не изменяя функцию или объект, получить результат функции getSquare для объекта sizes
+*/
+let sizes = { width: 5, height: 10 };
+
+console.log(getSquare.call(sizes));
