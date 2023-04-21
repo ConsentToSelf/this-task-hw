@@ -100,21 +100,42 @@ numerator.double().plusOne().plusOne().minusOne();
 numerator.value // 3
 */
 
-const numerator = {
-  value: 1,
-  double: function () {
-    this.value *= 2;
-    return this;
-  },
-  plusOne: function () {
-    ++this.value;
-    return this;
-  },
-  minusOne: function () {
-    --this.value;
-    return this;
-  },
-};
-numerator.double().plusOne().plusOne().minusOne();
+// const numerator = {
+//   value: 1,
+//   double: function () {
+//     this.value *= 2;
+//     return this;
+//   },
+//   plusOne: function () {
+//     ++this.value;
+//     return this;
+//   },
+//   minusOne: function () {
+//     --this.value;
+//     return this;
+//   },
+// };
+// numerator.double().plusOne().plusOne().minusOne();
 
-console.log(numerator.value);
+// console.log(numerator.value);
+
+// five
+/*
+Создать объект с розничной ценой и количеством продуктов.
+
+Этот объект должен содержать метод для получения общей стоимости всех товаров (цена * количество продуктов)
+*/
+
+// function getAllPrice(price) {
+//   let allProducts =
+//     parseInt(this.apple) + parseInt(this.banan) + parseInt(this.cucumber);
+//   price *= allProducts;
+//   return price;
+// }
+// const products = {
+//   apple: "2$",
+//   banan: "5$",
+//   cucumber: "4$",
+//   getAllPrice,
+// };
+// console.log(products.getAllPrice(4));
